@@ -1,0 +1,109 @@
+
+body{
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    background-color: hsl(249, 3%, 7%);
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+h1{
+    font-size: 36px;
+    letter-spacing: 0.2rem;
+}
+
+.guess {
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ gap: 3px;
+ width: 300px; 
+margin-bottom: 6px; }
+
+ .correct{
+    background-color: hsl(120, 100%, 28%);
+    border-color: hsl(120, 100%, 28%);;
+ }
+
+ .present {
+    background-color: hsl(49, 61%, 56%);
+    border-color: hsl(49, 61%, 56%);
+ }
+
+ .absent {
+    background-color: gray;
+    border-color: gray;
+ }
+
+
+.guess__tile{
+    border: 2px solid hsl(0, 0%, 46%);
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 600;
+ }
+
+ .has-letter {
+   border-color: hsl(0, 0%, 67%) ;
+ }
+
+@keyframes  flip-in{
+    from{
+        transform: rotateX(0deg);
+    }
+
+    to{
+        transform: rotateX(-90deg);
+    }
+ }
+
+@keyframes flip-out{
+    form{
+        transform: rotateX(-90deg);
+    }
+
+    to{
+        transform: rotateX(0deg); 
+       }
+ }
+
+ .flip-in {
+    animation: flip-in 250ms;
+    animation-fill-mode: forwards;
+ }
+
+ .flip-out {
+    animation: flip-out 250ms;
+    animation-fill-mode: forwards ;
+ }
+
+ @keyframes jump{
+   0%{
+      transform: translateY(0);
+   }
+
+   50% {
+      transform: translateY(-10px);
+   }
+
+   100% {
+    transform: translateY(0); 
+   }
+ }
+
+ .jump{
+   animation: jump 250ms;
+   animation-fill-mode: forwards ;
+ }
+
+
+
